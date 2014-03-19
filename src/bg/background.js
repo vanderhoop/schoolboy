@@ -11,11 +11,19 @@ chrome.extension.onMessage.addListener(
     chrome.pageAction.show(sender.tab.id);
     sendResponse();
   });
+
+// I want to check the browser for time in the current timezone
+// I only want to run the following checks on school days between
+// 9:00 a.m. and 5:30 p.m.
 var href = window.location.href
 var faceRegex = /^https?:\/\/w*?\.facebook\.com/,
-    espnRegex = /^https?:\/\/w*?\.espn\.go\.com/;
+    espnRegex = /^https?:\/\/w*?\.espn\.go\.com/,
+    $body = $("body");
 
-if (faceRegex.test(href) || espnRegex.test(href)){
+if (faceRegex.test(href)){
+  $body.children().remove();
+  // I want to get a great font alerting folks to their trespessing
+
   console.log("You shouldn't be here.");
 } else {
   console.log("It's fine that you visited this site");
