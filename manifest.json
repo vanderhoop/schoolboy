@@ -1,0 +1,18 @@
+{ "browser_action" : { "default_icon" : "icons/icon16.png"},
+  "manifest_version": 2,
+  "description" : "Alert on Google Load",
+  "icons" : { "128" : "icons/icon128.png" },
+  "name" : "Auto alert",
+  "version" : "1.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/jquery.js", "src/bg/background.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "default_locale": "en"
+}
+
+
+
