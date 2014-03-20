@@ -11,7 +11,7 @@ function validTimeForIntercept(){
     return true;
   } // end if
   // if between 9:00 a.m. and 5:30 p.m.
-  if (hour >= 8 && hour < 17){
+  if (hour >= 8 && hour < 23){
     return true;
   } else {
     return false;
