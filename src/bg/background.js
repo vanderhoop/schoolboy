@@ -13,18 +13,14 @@ var href = window.location.href,
 
     regexFlags = new RegExp(flaggedSites.join("|"), "i");
 
-if (validTimeForIntercept()) {
-    // elements for one time selection
+if (validTimeForIntercept() && regexFlags.test(href)) {
+
+  console.log("You shouldn't be here.");
   var $body = $("body"),
       $newDiv = $("<div>");
-  $newDiv.addClass("container").html("<h1>Facebook? Really?</h1>");
 
-  if (regexFlags.test(href)){
-    $body.children().remove();
-    $body.append($newDiv);
+  $newDiv.addClass("ext-container").html("<h1>FACEBOOK DOESN'T HAVE ANYTHING BETTER TO DO.<br> BUT YOU DO.</h1>");
+  $body.children().remove();
+  $body.append($newDiv);
 
-    console.log("You shouldn't be here.");
-  } else {
-    console.log("It's fine that you visited this site");
-  }
 } // if moveFoward
