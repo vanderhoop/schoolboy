@@ -11,9 +11,9 @@ var href = window.location.href,
       "pinterest.com"
     ],
 
-    regexFlags = new RegExp(flaggedSites.join("|"), "i");
-
-if (isWeekday() && validTimeForIntercept() && regexFlags.test(href)) {
+    regexFlags = new RegExp(flaggedSites.join("|"), "i"),
+    date = new Date();
+if (isWeekday(date) && validTimeForIntercept(date) && isNotFedHoliday(date) &&regexFlags.test(href)) {
 
   console.log("You shouldn't be here.");
   var $body = $("body"),
