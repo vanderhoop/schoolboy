@@ -23,5 +23,5 @@ function validTimeForIntercept(){
 function weekday(){
   var dateObj = new Date(),
       day = dateObj.getDay();
-      (if day > 0 && day < 6){ return true; }
+      if (day > 0 && day < 6){ return true; } else { return false; }
 }
