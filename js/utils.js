@@ -20,7 +20,7 @@ function validTimeForIntercept(){
 
 // I want to write a function that returns whether it's a weekday
 
-function weekday(){
+function isWeekday(){
   var dateObj = new Date(),
       day = dateObj.getDay();
       if (day > 0 && day < 6){ return true; } else { return false; }

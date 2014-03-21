@@ -13,7 +13,7 @@ var href = window.location.href,
 
     regexFlags = new RegExp(flaggedSites.join("|"), "i");
 
-if (weekday() && validTimeForIntercept() && regexFlags.test(href)) {
+if (isWeekday() && validTimeForIntercept() && regexFlags.test(href)) {
 
   console.log("You shouldn't be here.");
   var $body = $("body"),
