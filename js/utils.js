@@ -9,7 +9,7 @@ function validTimeForIntercept(dateObj){
   if (hour == 17 && minute < 30) { return true; }
   
   // if between 9:00 a.m. and 5:30 p.m.
-  if (hour >= 8 && hour <= 23){ // (changed to 23 for late-night dev purposes)
+  if (hour >= 8 && hour <= 17){
     return true;
   } else {
     return false;
