@@ -5,9 +5,12 @@ body, html, .ext-container {
 	font-family: small arial,sans-serif;
 }
 
-h1 {
-	font-size: small;
+.ext-container h1 {
+
+	font-size: 12px;
 	font-family: arial,sans-serif;
+	font-weight: normal;
+
 }
 
 
