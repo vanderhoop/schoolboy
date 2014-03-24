@@ -1,6 +1,10 @@
 console.log("utils linked");
 
-// I want to write a function that returns whether it's between 9:00 a.m. and 5:30 p.m.
+// returns whether it's between 9:00 a.m. and 5:30 p.m.
+  // I want to return false when it's between 12:15 and 1:45
+    // if hour is 12 and min is greater than 15 
+      // OR
+    // if the hour is 13 and the min is less than 45
 function validTimeForIntercept(dateObj){
   var hour = dateObj.getHours(),
       minute = dateObj.getMinutes();
