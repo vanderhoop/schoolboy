@@ -1,6 +1,5 @@
 $(document).ready(function(){
   console.log("linked");
-  $("head").html("<link href='http://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>");
 
   var href = window.location.href,
       flaggedSites = [
@@ -22,7 +21,7 @@ $(document).ready(function(){
   } // if moveFoward
 
   function displayBlock(){
-    console.log("You shouldn't be here.");
+    console.log("It was wrong of you to come here.");
     var $body = $("body"),
         $newDiv = $("<div>"),
         $img = $("<img>"),

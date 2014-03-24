@@ -10,6 +10,7 @@ h1 {
 	font-family: arial,sans-serif;
 }
 
+
 .ext-container {
   /*background-color: #facade;*/
   width: 960px;
@@ -18,11 +19,15 @@ h1 {
 }
 
 .ext-container img {
-	/*visibility: hidden;*/
 	width: 100%;
 	margin: 0 auto;
 }
 
+/*
+===============================
+Animation 
+===============================
+*/
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
