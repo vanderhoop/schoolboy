@@ -23,10 +23,20 @@ $(document).ready(function(){
 
   function displayBlock(){
     console.log("You shouldn't be here.");
-    var $body   = $("body"),
+    var $body = $("body"),
         $newDiv = $("<div>"),
-        $img    = $("<img>"),
-        $h1     = $("<h1>").html("YOU CAN DICK AROUND AT 5:30");
+        $img = $("<img>"),
+        scoldings = [
+          "YOU'RE SPENDING TOO MUCH MONEY TO BE DICKING AROUND.<br>DO SOMETHING PRODUCTIVE.",
+          "YOU CAN FART AROUND ON YOUR OWN TIME. NAMELY, AFTER 5:30",
+          "THE INTERNET ISN'T GOING ANYWHERE. YOU CAN CHECK ON IT LATER.",
+          "GO SOMEWHERE USEFUL.",
+          "THIS INTERRUPTION IS BROUGHT TO YOU BY GENERAL ASSEMBLY.",
+          "THIS PLACE IS A TIMESINK. STEAR CLEAR."
+        ],
+
+        // randomizes scolding
+        $h1 = $("<h1>").html(scoldings[Math.floor(Math.random() * scoldings.length)] );
 
       $newDiv.addClass("ext-container");
       $img.attr("src", "https://ga-core.s3.amazonaws.com/production/uploads/program/default_image/128/WDI.png").addClass("animated flipInX");

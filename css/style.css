@@ -1,6 +1,13 @@
+@charset "UTF-8";
 
 body, html, .ext-container {
 	height: 100%;
+	font-family: small arial,sans-serif;
+}
+
+h1 {
+	font-size: small;
+	font-family: arial,sans-serif;
 }
 
 .ext-container {
