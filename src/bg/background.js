@@ -1,5 +1,6 @@
 $(document).ready(function(){
   console.log("linked");
+  $("head").html("<link href='http://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>");
 
   var href = window.location.href,
       flaggedSites = [
@@ -15,35 +16,30 @@ $(document).ready(function(){
       regexFlags = new RegExp(flaggedSites.join("|"), "i"),
       date = new Date();
 
+  // Blockade is only run during school days between 9:00 a.m. and 5:30 p.m.
   if (isWeekday(date) && validTimeForIntercept(date) && isNotFedHoliday(date) && regexFlags.test(href)) {
     displayBlock();
   } // if moveFoward
 
   function displayBlock(){
     console.log("You shouldn't be here.");
-    var $body = $("body"),
+    var $body   = $("body"),
         $newDiv = $("<div>"),
-        $img = $("<img>");
+        $img    = $("<img>"),
+        $h1     = $("<h1>").html("YOU CAN DICK AROUND AT 5:30");
 
       $newDiv.addClass("ext-container");
-      $img.attr("src", "https://ga-core.s3.amazonaws.com/production/uploads/program/default_image/128/WDI.png");
+      $img.attr("src", "https://ga-core.s3.amazonaws.com/production/uploads/program/default_image/128/WDI.png").addClass("animated flipInX");
       
-      // I want to set the object's visibility to hidden;        
       $body.empty();
       $newDiv.append($img);
-      $body.append($newDiv);
-      var animations = [
-        "pullUp",
-        "pullDown",
-        "stretchRight",
-        "stretchLeft"
-      ];
-
-      $("img").addClass(animations[Math.floor(Math.random() * animations.length)]);
+      $body.append($newDiv).delay(2000);
+      $(".ext-container").append($h1);
+      $("h1").addClass("animated flipInX");
 
   } // end displayBlock
 
   displayBlock();
-});
+}); // end document ready
 
 
