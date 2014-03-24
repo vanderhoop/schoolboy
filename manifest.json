@@ -4,6 +4,7 @@
   "icons" : { "128" : "icons/books128.png",
                "32" : "icons/books32.png" },
   "name" : "Schoolboy",
+  "web_accessible_resources": ["icons/wdi.png"],
   "version" : "1.0",
   "content_scripts": [
     {

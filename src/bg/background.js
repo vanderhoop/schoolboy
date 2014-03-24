@@ -36,10 +36,10 @@ $(document).ready(function(){
         ],
 
         // randomizes scolding
-        $h1 = $("<h1>").html(scoldings[Math.floor(Math.random() * scoldings.length)] );
-
+        $h1 = $("<h1>").html(scoldings[Math.floor(Math.random() * scoldings.length)] ),
+        $imgSRC = chrome.extension.getURL("icons/wdi.png");
       $newDiv.addClass("ext-container");
-      $img.attr("src", "https://ga-core.s3.amazonaws.com/production/uploads/program/default_image/128/WDI.png").addClass("animated flipInX");
+      $img.attr("src", $imgSRC).addClass("animated flipInX");
       
       $body.empty();
       $newDiv.append($img);
