@@ -1,4 +1,4 @@
-{ "browser_action" : { "default_icon" : "icons/icon16.png"},
+{ "browser_action" : { "default_icon" : "icons/wdi_16.png"},
   "manifest_version": 2,
   "description" : "Alert on Google Load",
   "icons" : { "128" : "icons/wdi_128.png",
