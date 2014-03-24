@@ -39,7 +39,7 @@ $(document).ready(function(){
         $imgSRC = chrome.extension.getURL("icons/wdi.png");
       $newDiv.addClass("ext-container");
       $img.attr("src", $imgSRC).addClass("animated flipInX");
-      
+
       $body.empty();
       $newDiv.append($img);
       $body.append($newDiv).delay(2000);
@@ -48,7 +48,6 @@ $(document).ready(function(){
 
   } // end displayBlock
 
-  displayBlock();
 }); // end document ready
 
 
