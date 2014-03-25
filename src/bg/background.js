@@ -22,6 +22,13 @@ $(document).ready(function(){
 
   function displayBlock(){
     console.log("It was wrong of you to come here.");
+    var hostName = location.hostname;
+    if (hostName[0] == "w") {
+      hostName = hostName.substr(4, hostName.length);
+    }
+    hostName = hostName.substr(0, hostName.indexOf('.'));
+    console.log(hostName);
+
     var $body = $("body"),
         $newDiv = $("<div>"),
         $img = $("<img>"),
@@ -47,7 +54,6 @@ $(document).ready(function(){
       $("h1").addClass("animated flipInX");
 
   } // end displayBlock
-
 }); // end document ready
 
 
