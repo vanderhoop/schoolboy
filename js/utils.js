@@ -9,7 +9,7 @@ function validTimeForIntercept(dateObj){
   // disables disabler during lunch window (12:15 - 1:45 p.m.)
   if ((hour == 12 && minute > 15) || (hour == 13 && minute < 45)){ return false; }
   // if between 9:00 a.m. and 5:30 p.m.
-  if (hour >= 8 && hour < 17){
+  if (hour >= 8 && hour < 17) {
     return true;
   } else {
     return false;
